@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SA.EDITOR | Professional Content Creation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            DEFAULT: '#FF0000',
+                            dark: '#cc0000',
+                            accent: '#3EA6FF'
+                        },
+                        dark: {
+                            bg: '#0a0a0a',
+                            surface: '#161616',
+                            text: '#f1f1f1',
+                            muted: '#9ca3af'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        
+        body {
+            background-color: #0a0a0a;
+            color: #f1f1f1;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .glass {
+            background: rgba(22, 22, 22, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Portrait Aspect Ratio for Shorts */
+        .shorts-container {
+            position: relative;
+            padding-bottom: 177.77%; /* 9:16 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 16px;
+            background: #000;
+        }
+
+        .shorts-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .hero-gradient {
+            background: radial-gradient(circle at 50% 50%, rgba(255, 0, 0, 0.1) 0%, rgba(10, 10, 10, 0) 100%);
+        }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0a0a0a; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #FF0000; }
+    </style>
+</head>
+<body class="antialiased selection:bg-brand selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="#home" class="flex items-center gap-2 group">
+                    <div class="bg-brand p-1 rounded">
+                        <i class="fa-solid fa-scissors text-white text-sm"></i>
+                    </div>
+                    <span class="font-extrabold text-xl tracking-tighter">SA.<span class="text-brand">EDITOR</span></span>
+                </a>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-sm font-medium hover:text-brand transition-colors">Home</a>
+                    <a href="#portfolio" class="text-sm font-medium hover:text-brand transition-colors">See Work</a>
+                    <a href="#services" class="text-sm font-medium hover:text-brand transition-colors">Rates</a>
+                    <a href="https://www.youtube.com/@SA.EDITOR-SA" target="_blank" class="bg-brand hover:bg-brand-dark text-white px-5 py-2 rounded-full text-sm font-bold transition-all hover:scale-105 active:scale-95 shadow-lg shadow-brand/20">
+                        <i class="fa-brands fa-youtube mr-2"></i>Subscribe
+                    </a>
+                </div>
+
+                <div class="md:hidden">
+                    <button type="button" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="p-2 text-gray-400">
+                        <i class="fa-solid fa-bars-staggered text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden glass border-b border-white/10">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#home" class="block py-3 border-b border-white/5">Home</a>
+                <a href="#portfolio" class="block py-3 border-b border-white/5">See Work</a>
+                <a href="#services" class="block py-3 border-b border-white/5">Rates</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header id="home" class="relative pt-32 pb-20 lg:pt-52 lg:pb-40 hero-gradient">
+        <div class="max-w-7xl mx-auto px-4 text-center relative z-10">
+            <div class="inline-block px-4 py-1.5 mb-6 rounded-full border border-brand/30 bg-brand/5 text-brand text-xs font-bold tracking-widest uppercase">
+                Expert Video Editor & Stylist
+            </div>
+            <h1 class="text-6xl md:text-8xl font-black mb-8 tracking-tighter leading-none uppercase">
+                THE <span class="text-brand">SA.EDITOR</span>
+            </h1>
+            <p class="text-dark-muted text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+                I help creators at <span class="text-white font-semibold">@SA.EDITOR-SA</span> and beyond tell better stories through high-impact visual editing.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-5">
+                <a href="https://www.youtube.com/@SA.EDITOR-SA" target="_blank" class="w-full sm:w-auto px-10 py-4 bg-white text-black font-black rounded-xl hover:bg-brand hover:text-white transition-all shadow-xl">
+                    VIEW MY CHANNEL
+                </a>
+                <!-- Updated Button Name -->
+                <a href="#portfolio" class="w-full sm:w-auto px-10 py-4 glass rounded-xl font-bold hover:bg-white/10 transition-all">
+                    SEE WORK
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Shorts Portfolio Section -->
+    <section id="portfolio" class="py-24 bg-dark-surface/20">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-black mb-4 tracking-tighter uppercase">Shorts <span class="text-brand">Showcase</span></h2>
+                <p class="text-dark-muted max-w-xl mx-auto">High-engagement vertical content from my portfolio.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Video 1 -->
+                <div class="group">
+                    <div class="shorts-container shadow-2xl group-hover:ring-2 ring-brand transition-all">
+                        <iframe src="https://youtube.com/shorts/Q5tHDvENYE8?si=moMm2-G18dmisBPT" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <!-- Video 2 -->
+                <div class="group">
+                    <div class="shorts-container shadow-2xl group-hover:ring-2 ring-brand transition-all">
+                        <iframe src="https://www.youtube.com/shorts/Q5tHDvENYE8?feature=share" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <!-- Video 3 -->
+                <div class="group">
+                    <div class="shorts-container shadow-2xl group-hover:ring-2 ring-brand transition-all">
+                        <iframe src="https://www.youtube.com/embed/ZroqNfVrgIQ" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <!-- Video 4 -->
+                <div class="group">
+                    <div class="shorts-container shadow-2xl group-hover:ring-2 ring-brand transition-all">
+                        <iframe src="https://www.youtube.com/embed/WljSG_3XfGk" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl font-black mb-4 tracking-tighter uppercase">Service <span class="text-brand">Rates</span></h2>
+                <p class="text-dark-muted max-w-xl mx-auto">Affordable professional editing for everyone.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Package 1: 20 Rupees -->
+                <div class="p-10 rounded-3xl glass hover:bg-white/5 transition-all group">
+                    <i class="fa-solid fa-bolt text-3xl text-brand mb-6 group-hover:animate-pulse"></i>
+                    <h3 class="text-xl font-bold mb-4">Shorts & Reels</h3>
+                    <p class="text-dark-muted mb-6">Fast-paced vertical content designed to hook viewers in the first 3 seconds.</p>
+                    <div class="text-3xl font-black">20 <span class="text-brand font-medium tracking-tight">Rupees</span><span class="text-sm font-normal text-dark-muted ml-1">/video</span></div>
+                </div>
+
+                <!-- Package 2 -->
+                <div class="p-10 rounded-3xl bg-brand/10 border-2 border-brand/50 relative transform md:-translate-y-4">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand text-white text-[10px] font-black px-4 py-1 rounded-full uppercase tracking-wider">Most Requested</div>
+                    <i class="fa-solid fa-clapperboard text-3xl text-brand mb-6"></i>
+                    <h3 class="text-xl font-bold mb-4">YouTube Pro</h3>
+                    <p class="text-white/80 mb-6">Full narrative editing, sound design, and color grading for long-form content.</p>
+                    <div class="text-3xl font-black">99 <span class="text-white/70 font-medium tracking-tight">Rupees</span><span class="text-sm font-normal text-white/60 ml-1">/video</span></div>
+                </div>
+
+                <!-- Package 3 -->
+                <div class="p-10 rounded-3xl glass hover:bg-white/5 transition-all">
+                    <i class="fa-solid fa-infinity text-3xl text-brand mb-6"></i>
+                    <h3 class="text-xl font-bold mb-4">Monthly Plan</h3>
+                    <p class="text-dark-muted mb-6">Unburden your workflow. Get bulk video editing with priority turnaround.</p>
+                    <div class="text-2xl font-black text-brand">Contact Me</div>
+                    <p class="text-xs text-dark-muted mt-2">Custom pricing available</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-black border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex items-center gap-2">
+                <span class="font-extrabold text-lg tracking-tighter uppercase">SA.<span class="text-brand">EDITOR</span></span>
+            </div>
+            <div class="text-dark-muted text-xs">
+                &copy; 2024 SA.EDITOR-SA. All rights reserved.
+            </div>
+            <div class="flex space-x-6">
+                <a href="https://www.youtube.com/@SA.EDITOR-SA" target="_blank" class="text-dark-muted hover:text-brand"><i class="fa-brands fa-youtube text-xl"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Error-proof scroll handler
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if(href && href !== "#") {
+                    const targetElement = document.querySelector(href);
+                    if (targetElement) {
+                        e.preventDefault();
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                        const mobileMenu = document.getElementById('mobile-menu');
+                        if (mobileMenu) mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
